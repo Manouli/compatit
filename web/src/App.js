@@ -1,12 +1,8 @@
-import React from 'react';
-import { App } from '@compatit/common';
-
-console.log(App)
+import React from "react";
+import { App } from "@compatit/common";
 
 const Container = () => {
-  return (
-      <App />
-  )
-}
+  return <App />;
+};
 
 export default Container;

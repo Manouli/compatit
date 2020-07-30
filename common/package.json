@@ -11,6 +11,7 @@
   "devDependencies": {
     "@react-native-community/eslint-config": "^0.0.5",
     "@types/react-native": "^0.62.13",
+    "jest": "^24.9.0",
     "eslint": "^6.5.1",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.5"
@@ -18,5 +19,8 @@
   "peerDependencies": {
     "react": "^16.11.0",
     "react-native": "^0.62.2"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
