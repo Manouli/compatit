@@ -1,0 +1,11 @@
+{
+  "name": "compatit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Emmanouil Papoutsakis",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

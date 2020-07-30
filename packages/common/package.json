@@ -1,0 +1,20 @@
+{
+  "name": "@compatit/common",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "watch": "tsc --watch"
+  },
+  "author": "Emmanouil Papoutsakis",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react-native": "^0.62.13",
+    "react": "^16.13.1",
+    "react-native": "^0.62.2",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
+}
