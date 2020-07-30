@@ -5,16 +5,18 @@
     "common": "cd common && yarn",
     "mobile": "cd mobile && yarn && cd ios && pod install",
     "web": "cd web && yarn",
-    "bootstrap": "yarn common && yarn mobile && yarn web",
+    "bootstrap": "run-s common mobile web",
     "run-ios": "cd mobile && yarn react-native run-ios",
     "run-android": "cd mobile && yarn react-native run-android",
-    "run-app": "cd mobile && yarn start",
-    "run-web": "cd web && yarn start",
-    "run-suite": "concurrently \"yarn run-app\" \"yarn run-web\""
+    "run-app": "cd mobile && ttab -t 'Mobile Server' yarn start",
+    "run-web": "cd web && ttab -t 'Web Server' yarn start",
+    "run-common": "cd common && ttab -t 'Watching Common' yarn watch",
+    "start": "run-s run-app run-web run-common"
   },
   "author": "Emmanouil Papoutsakis",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^5.2.0"
+    "npm-run-all": "^4.1.5",
+    "ttab": "^0.6.1"
   }
 }
