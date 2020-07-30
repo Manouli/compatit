@@ -1,11 +1,20 @@
 {
-  "name": "compatit",
+  "name": "@compatit/common",
   "version": "1.0.0",
-  "main": "index.js",
+  "scripts": {
+    "common": "cd common && yarn",
+    "mobile": "cd mobile && yarn && cd ios && pod install",
+    "web": "cd web && yarn",
+    "bootstrap": "yarn common && yarn mobile && yarn web",
+    "run-ios": "cd mobile && yarn react-native run-ios",
+    "run-android": "cd mobile && yarn react-native run-android",
+    "run-app": "cd mobile && yarn start",
+    "run-web": "cd web && yarn start",
+    "run-suite": "concurrently \"yarn run-app\" \"yarn run-web\""
+  },
   "author": "Emmanouil Papoutsakis",
   "license": "MIT",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
 }

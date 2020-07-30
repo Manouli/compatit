@@ -1,11 +1,11 @@
 import React from 'react';
 import { App } from '@compatit/common';
 
+console.log(App)
+
 const Container = () => {
   return (
-    <div className="container">
       <App />
-    </div>
   )
 }
 
