@@ -11,7 +11,7 @@
     "run-app": "cd mobile && ttab -t 'Mobile Server' yarn start",
     "run-web": "cd web && ttab -t 'Web Server' yarn start",
     "run-common": "cd common && ttab -t 'Watching Common' yarn watch",
-    "start": "run-s run-app run-web run-common"
+    "start": "run-s run-common run-app run-web"
   },
   "author": "Emmanouil Papoutsakis",
   "license": "MIT",
